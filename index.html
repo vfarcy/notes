@@ -489,8 +489,6 @@ Error message and password prompt
 
 <li>$:/view</li>
 
-<li>19 janvier 2020</li>
-
 <li>Bienvenue</li>
 
 <li>commentable</li>
@@ -14120,7 +14118,7 @@ Error message and password prompt
 <div created="20190527141402702" creator="v" modified="20190527141403353" modifier="vfarc" title="$:/status/UserName">
 <pre>vfarcy</pre>
 </div>
-<div created="20200119142459136" creator="vfarcy" list="[[19 janvier 2020]] [[Le journal]] [[Not alone]] Bienvenue" modified="20200119142514728" modifier="vfarcy" title="$:/StoryList">
+<div created="20200119142459136" creator="vfarcy" list="[[Le journal]] [[Not alone]] Bienvenue" modified="20200119142514728" modifier="vfarcy" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191102085643482" creator="vfarcy" modified="20191102085643482" modifier="vfarcy" title="$:/temp/HidePluginWarning">
@@ -15084,161 +15082,6 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20190530180222579" creator="vfarcy" modified="20191102185218310" modifier="vfarcy" title="$:/view">
 <pre>zoomin</pre>
-</div>
-<div created="20200119142543805" creator="vfarcy" modified="20200119142727193" modifier="vfarcy" tags="Journal" title="19 janvier 2020" type="text/x-tiddlywiki">
-<pre>!! Picking a distro
-
-There's as many linux distros as there are computer users (well, not quite, but there are a lot!) Here's how to choose one:
-
-* Are you a noob?
-** Ubuntu
-*** Vanilla works nicely
-*** Xubuntu or Lubuntu for a lighter desktop
-*** Kubuntu or KDE Neon for a full-featured (KDE) desktop
-* Want to experiment with the nuts and bolts?
-** Arch until you have some experience
-** If you're good at Linux, you might try Gentoo
-* Want to buff up your CV?
-** Redhat, Fedora, ~CentOS.
-* Are you a hipster?
-** Source mage
-** Stali
-** Alpine
-
-!! Basic terminal usage
-
-The program which shows text is called a terminal (or more properly, terminal emulator). Examples of this are xterm, konsole, Gnome Terminal, and st. The program which actually interprets what you type and runs commands is called a &quot;shell&quot;. Examples of a shell are bash (probably what you're using), zsh, dash, and rc. You can test by doing this:
-
-```
-echo $SHELL
-```
-
-It will probably say `/usr/bin/bash` or something similar; this will tell you for sure that it's bash you're using. I'll assume bash for this tutorial; most stuff ports over.
-
-If you're ever confused by a command, run `man cmd`, with `cmd` replaced by whatever command is confusing you.
-
-!!! Getting around
-
-Find out what directory you're in with `pwd` - ''P''rint ''W''orking ''D''irectory
-
-See what's in the current directory with `ls` - Directory ''L''i''s''ting.
-
-Change directory with the command `cd` - ''C''hange ''D''irectory
-
-Example session:
-
-```
-$ pwd
-/home/chameleon
-
-$ ls
-games   src   wiki
-
-$ cd games
-
-$ pwd
-/home/chameleon/games
-
-$ cd ..
-
-$ pwd
-/home/chameleon
-```
-
-!!! Working with files and directories
-
-Create directories with `mkdir` - ''M''a''k''e ''Dir''ectory
-
-Remove directories with `rmdir` - ''R''e''m''ove ''Dir''ectory. This only works for empty directories.
-
-Print the contents of files with `cat` - Con''cat''enate (more about this later).
-
-Copy files with `cp` - ''C''o''p''y
-
-Remove files with `rm` - ''R''e''m''ove
-
-Example session:
-
-```
-$ cd games
-
-$ ls
-zelda   mario   ff
-
-$ mkdir giana
-
-$ cd giana
-
-$ cp ../mario/mario1.nes giana.nes
-
-$ cat giana.nes
-Piracy is bad, kids!
-
-$ rm giana.nes
-
-$ cd ..
-
-$ rmdir giana
-```
-
-!!! Pipes
-
-In UNIX, processes send their output to &quot;stdout&quot; and take their input from &quot;stdin&quot;. The core UNIX philosophy is to send this output to other processes' input - a &quot;pipe&quot;.
-
-For example, `grep` filters based on an expression:
-
-```
-$ cat file
-foo
-bar
-baz
-foobar
-
-$ cat file | grep foo
-foo
-foobar
-
-$ grep foo &lt; file
-foo
-foobar
-```
-
-Note the usage of `|` (pipe) which sends the //output// of one command to the //input// of another; and `&lt;` which sends a file to the input of a file.
-
-You can use this to create files, as well:
-
-```
-$ grep foo &lt; file &gt; file-filtered
-
-$ cat file-filtered
-foo
-foobar
-```
-
-`&gt;` sends the output of a command to a file.
-
-You'd be amazed what you can compose with just pipes and standard unix commands. This chain:
-
-```bash
-tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq -c | sort -rn | sed ${1}q
-```
-
-Performs a useful task:
-
-&gt; Read a file of text, determine the n most frequently used words, and print out a sorted list of those words along with their frequencies.
-
-[[Read the article|https://franklinchen.com/blog/2011/12/08/revisiting-knuth-and-mcilroys-word-count-programs/]] for more!
-
-!! Where is everything on Linux!?
-
-* `/home/` is where everyone's home directories live (analogous to idioms like  `C:\Users\chameleon` on Windows)
-* `/bin` is where programs (''bin''aries) live
-* `/lib` is where libraries (''lib''raries) live (analogous to DLLs on Windows)
-* `/etc` is where configuration files live
-* `/dev` is where interfaces to your ''dev''ices live
-* `/var` is for ''var''ious crap (web directories, logs, mail)
-* `/share` is for shared files, such as icons, or other files programs need to operate (analagous to installation directories in Windows)
-** Note that you'll rarely get a `/share`, usually `/usr/share` instead. Stuff gets installed in `/usr`, which is pretty much the same as `/`. So you can treat directories like `/usr/bin` as being roughly the same as `/bin`</pre>
 </div>
 <div created="20190527143401434" creator="vfarcy" modified="20191104071155370" modifier="vfarcy" tags="Sommaire" title="Bienvenue">
 <pre>Bienvenue dans le voyage  exploratoire des chemins de la vie.
